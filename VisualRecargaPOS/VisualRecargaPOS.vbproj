@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{418C50D6-114E-4D04-AE5A-805E6CF8A233}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VisualRecargaPOS.My.MyApplication</StartupObject>
+    <RootNamespace>VisualRecargaPOS</RootNamespace>
+    <AssemblyName>VisualRecargaPOS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VisualRecargaPOS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VisualRecargaPOS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\VisualRecarga.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="classes\clsAyuda.vb" />
+    <Compile Include="classes\clsBancos.vb" />
+    <Compile Include="classes\clsCesar.vb" />
+    <Compile Include="classes\clsEmpresas.vb" />
+    <Compile Include="classes\clsMachineID.vb" />
+    <Compile Include="classes\clsSystemInfo.vb" />
+    <Compile Include="forms\frmAcercaDe.Designer.vb">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmAcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmConfig.designer.vb">
+      <DependentUpon>frmConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmConResumen.Designer.vb">
+      <DependentUpon>frmConResumen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmConResumen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmConTransaccion.Designer.vb">
+      <DependentUpon>frmConTransaccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmConTransaccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmDepositos.Designer.vb">
+      <DependentUpon>frmDepositos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmDepositos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmError.Designer.vb">
+      <DependentUpon>frmError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmImpresora.designer.vb">
+      <DependentUpon>frmImpresora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmImpresora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmManPassword.designer.vb">
+      <DependentUpon>frmManPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmManPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMensaje.designer.vb">
+      <DependentUpon>frmMensaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmMensaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmParamReg.Designer.vb">
+      <DependentUpon>frmParamReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmParamReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRepEdoCta.Designer.vb">
+      <DependentUpon>frmRepEdoCta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRepEdoCta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRepTransDiarias.Designer.vb">
+      <DependentUpon>frmRepTransDiarias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRepTransDiarias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRepVentasDiarias.Designer.vb">
+      <DependentUpon>frmRepVentasDiarias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRepVentasDiarias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmResetRegistro.designer.vb">
+      <DependentUpon>frmResetRegistro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmResetRegistro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmSinSaldo.Designer.vb">
+      <DependentUpon>frmSinSaldo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmSinSaldo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmConTrEnEspera.Designer.vb">
+      <DependentUpon>frmConTrEnEspera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmConTrEnEspera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmVenta.Designer.vb">
+      <DependentUpon>frmVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\mdiRecargaPOS.Designer.vb">
+      <DependentUpon>mdiRecargaPOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\mdiRecargaPOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\modConn.vb" />
+    <Compile Include="modules\modSLM.vb" />
+    <Compile Include="modules\modVisualRecarga.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmConfig.resx">
+      <DependentUpon>frmConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmConResumen.resx">
+      <DependentUpon>frmConResumen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmConTransaccion.resx">
+      <DependentUpon>frmConTransaccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmDepositos.resx">
+      <DependentUpon>frmDepositos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmError.resx">
+      <DependentUpon>frmError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmImpresora.resx">
+      <DependentUpon>frmImpresora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmManPassword.resx">
+      <DependentUpon>frmManPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmMensaje.resx">
+      <DependentUpon>frmMensaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmParamReg.resx">
+      <DependentUpon>frmParamReg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRepEdoCta.resx">
+      <DependentUpon>frmRepEdoCta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRepTransDiarias.resx">
+      <DependentUpon>frmRepTransDiarias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRepVentasDiarias.resx">
+      <DependentUpon>frmRepVentasDiarias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmResetRegistro.resx">
+      <DependentUpon>frmResetRegistro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmSinSaldo.resx">
+      <DependentUpon>frmSinSaldo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmConTrEnEspera.resx">
+      <DependentUpon>frmConTrEnEspera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmVenta.resx">
+      <DependentUpon>frmVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\mdiRecargaPOS.resx">
+      <DependentUpon>mdiRecargaPOS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_recarga_middle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_recarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisualRecarga.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrimaryKeyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner_recarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_recarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_digitel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_directv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_movilnet.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_movistar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_netuno.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_cantv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_simpletv.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Reactor_Enabled="1" Reactor_Commands="" Reactor_Project="" Reactor_Configuration="Release" Reactor_Output="&lt;AssemblyLocation&gt;\&lt;AssemblyFileName&gt;" Reactor_Deploy="0" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
